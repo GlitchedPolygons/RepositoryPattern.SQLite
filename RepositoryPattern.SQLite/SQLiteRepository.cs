@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 using GlitchedPolygons.RepositoryPattern;
 
-namespace RepositoryPattern.SQLite
+namespace GlitchedPolygons.RepositoryPattern.SQLite
 {
     public abstract class SQLiteRepository<T1, T2> : IRepository<T1, T2> where T1 : IEntity<T2>
     {
