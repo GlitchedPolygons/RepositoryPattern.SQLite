@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>GlitchedPolygons.RepositoryPattern.SQLite</AssemblyName>
+    <RootNamespace>GlitchedPolygons.RepositoryPattern.SQLite</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Glitched Polygons</Authors>
+    <Company>Glitched Polygons</Company>
+    <Description>Abstract base class for SQLite repositories.</Description>
+    <PackageProjectUrl>https://github.com/GlitchedPolygons/RepositoryPattern</PackageProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/GlitchedPolygons/RepositoryPattern/master/icon.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/GlitchedPolygons/RepositoryPattern.SQLite</RepositoryUrl>
+    <PackageTags>c# repository design pattern base interface declaration db database access abstraction repositories sql relational rdbms dbms sqlite embedded</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\git\glitched-polygons\nuget\RepositoryPattern.SQLite\RepositoryPattern.SQLite\GlitchedPolygons.RepositoryPattern.SQLite.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\git\glitched-polygons\nuget\RepositoryPattern.SQLite\RepositoryPattern.SQLite\GlitchedPolygons.RepositoryPattern.SQLite.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="1.60.6" />
+    <PackageReference Include="GlitchedPolygons.RepositoryPattern" Version="1.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
