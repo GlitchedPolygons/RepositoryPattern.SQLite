@@ -15,6 +15,18 @@ namespace UnitTests
 
         public override async Task<bool> Add(User entity)
         {
+            if (entity is null)
+            {
+                return false;
+            }
+
+            if (!string.IsNullOrEmpty(entity.Id))
+            {
+                throw new ArgumentException($"{nameof(TestSQLiteUserRepo)}::{nameof(Add)}: The {nameof(entity)} argument's Id member has been assigned. Very bad! Entity.Id should be left alone (null or default value) because it is set by the add method.");
+            }
+
+            entity.Id = Guid.NewGuid().ToString("N");
+            
             using (var dbcon = OpenConnection())
             {
                 string sql = $"INSERT INTO \"{TableName}\" VALUES (@Id, @FullName, @Address, @PhoneNumber)";
@@ -23,9 +35,27 @@ namespace UnitTests
             }
         }
 
-        public override Task<bool> AddRange(IEnumerable<User> entities)
+        public override async Task<bool> AddRange(IEnumerable<User> entities)
         {
-            throw new NotImplementedException();
+            var sql = new StringBuilder($"INSERT INTO \"{TableName}\" VALUES ", 256);
+
+            foreach (var entity in entities)
+            {
+                if (!string.IsNullOrEmpty(entity.Id))
+                {
+                    throw new ArgumentException($"{nameof(TestSQLiteUserRepo)}::{nameof(AddRange)}: One or more {nameof(entities)} Id member has been assigned. Very bad! Entity.Id should be left alone (null or default value) because it is set by the add method.");
+                }
+
+                entity.Id = Guid.NewGuid().ToString("N");
+
+                sql.Append("('").Append(entity.Id).Append("', '").Append(entity.FullName).Append("', '").Append(entity.Address).Append("', '").Append(entity.PhoneNumber).Append("'),");
+            }
+
+            using (var dbcon = OpenConnection())
+            {
+                int result = await dbcon.ExecuteAsync(sql.ToString().TrimEnd(','));
+                return result > 0;
+            }
         }
 
         public override async Task<bool> Update(User entity)

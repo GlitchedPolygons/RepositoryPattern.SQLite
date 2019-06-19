@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Threading.Tasks;
 using Xunit;
 using GlitchedPolygons.RepositoryPattern.SQLite;
 
@@ -20,6 +21,12 @@ namespace UnitTests
         public void EnsureTestDbExists()
         {
             Assert.True(File.Exists(path));
+        }
+
+        [Fact]
+        public async Task T()
+        {
+            
         }
     }
 }
