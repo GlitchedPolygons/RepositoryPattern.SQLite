@@ -128,6 +128,26 @@ namespace UnitTests
         }
         
         [Fact]
+        public async Task RemoveRangeById_RowsAreDeleted_DbDoesNotContainEntries()
+        {
+            var users = new List<User>()
+            {
+                new User {Address = "address0", FullName = "name0", PhoneNumber = 47},
+                new User {Address = "address1", FullName = "name1", PhoneNumber = 48},
+                new User {Address = "address2", FullName = "name2", PhoneNumber = 49},
+                new User {Address = "address3", FullName = "name3", PhoneNumber = 50},
+            };
+            
+            await repo.AddRange(users);
+            bool success = await repo.RemoveRange(users.Select(u => u.Id));
+            foreach (var user in users)
+            {
+                Assert.DoesNotContain(await repo.GetAll(), u => u.Id == user.Id);
+            }
+            Assert.True(success);
+        }
+        
+        [Fact]
         public async Task Remove_TestRowIsDeleted_DbDoesNotContainEntry()
         {
             var temp = new User();
