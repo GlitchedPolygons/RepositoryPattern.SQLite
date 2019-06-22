@@ -5,6 +5,8 @@ solution: ./RepositoryPattern.SQLite.sln
 dist: trusty
 notifications:
   email: false
+before_install:
+  - git lfs pull
 install:
   - dotnet restore ./RepositoryPattern.SQLite.sln
 mono: none
