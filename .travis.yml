@@ -8,7 +8,7 @@ notifications:
 install:
   - dotnet restore ./RepositoryPattern.SQLite.sln
 mono: none
-dotnet: 2.1.300
+dotnet: 2.2.100
 script:
   - dotnet restore ./RepositoryPattern.SQLite.sln
   - cd UnitTests/
