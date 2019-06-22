@@ -1,16 +1,16 @@
 
 language: csharp
-sudo: false
+mono: none
+sudo: required
+dist: xenial
+dotnet: 2.2
 solution: ./RepositoryPattern.SQLite.sln
-dist: trusty
 notifications:
   email: false
 before_install:
   - git lfs pull
 install:
   - dotnet restore ./RepositoryPattern.SQLite.sln
-mono: none
-dotnet: 2.2.100
 script:
   - dotnet restore ./RepositoryPattern.SQLite.sln
   - cd UnitTests/
