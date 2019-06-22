@@ -110,8 +110,21 @@ namespace UnitTests
         [Fact]
         public async Task Remove_TestRowIsDeleted_DbDoesNotContainEntry()
         {
-            bool success = await repo.Remove("DELETE");
+            var temp = new User();
+            await repo.Add(temp);
+            bool success = await repo.Remove(temp);
             Assert.True(success);
+            Assert.DoesNotContain(await repo.GetAll(), u => u.Id == temp.Id);
+        }
+        
+        [Fact]
+        public async Task RemoveById_TestRowIsDeleted_DbDoesNotContainEntry()
+        {
+            var temp = new User();
+            await repo.Add(temp);
+            bool success = await repo.Remove(temp.Id);
+            Assert.True(success);
+            Assert.DoesNotContain(await repo.GetAll(), u => u.Id == temp.Id);
         }
     }
 }

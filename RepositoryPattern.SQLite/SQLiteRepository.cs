@@ -258,7 +258,7 @@ namespace GlitchedPolygons.RepositoryPattern.SQLite
                     sql.Append('\'').Append(id).Append('\'').Append(", ");
                 }
 
-                string sqlString = sql.Append(");").ToString();
+                string sqlString = sql.ToString().TrimEnd(',', ' ') + ");";
                 
                 sqlc = OpenConnection();
                 result = await sqlc.ExecuteAsync(sqlString) > 0;
