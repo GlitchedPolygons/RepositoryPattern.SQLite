@@ -12,4 +12,4 @@ If you want to clone and work on this, make sure that you have [git lfs installe
 
 ---
 
-More information regarding SQLite itself can be found on www.sqlite.org
+_More information regarding SQLite itself can be found on www.sqlite.org_
