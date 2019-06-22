@@ -1,13 +1,12 @@
-﻿using System;
+﻿using Dapper;
+using System;
+using System.Text;
 using System.Linq;
 using System.Data;
 using System.Data.SQLite;
 using System.Threading.Tasks;
 using System.Linq.Expressions;
 using System.Collections.Generic;
-
-using Dapper;
-using GlitchedPolygons.RepositoryPattern;
 
 namespace GlitchedPolygons.RepositoryPattern.SQLite
 {
@@ -51,7 +50,7 @@ namespace GlitchedPolygons.RepositoryPattern.SQLite
         }
 
         /// <summary>
-        /// Gets an entity by its unique identifier.
+        /// Gets an entity asynchronously by its unique identifier.
         /// </summary>
         /// <param name="id">The entity's unique identifier.</param>
         /// <returns>The first found <see cref="T:GlitchedPolygons.RepositoryPattern.IEntity`1" />; <c>null</c> if nothing was found.</returns>
@@ -124,7 +123,7 @@ namespace GlitchedPolygons.RepositoryPattern.SQLite
         {
             try
             {
-                IEnumerable<T1> result = (await GetAll()).Where(predicate.Compile());
+                IEnumerable<T1> result = (await GetAll())?.Where(predicate.Compile());
                 return result;
             }
             catch (Exception)
@@ -163,18 +162,7 @@ namespace GlitchedPolygons.RepositoryPattern.SQLite
         /// <returns>Whether the entity could be removed successfully or not.</returns>
         public async Task<bool> Remove(T1 entity)
         {
-            using (var sqlc = OpenConnection())
-            {
-                try
-                {
-                    int affectedRows = await sqlc.ExecuteAsync($"DELETE FROM \"{TableName}\" WHERE \"Id\" = @Id", new {Id = entity.Id});
-                    return affectedRows > 0;
-                }
-                catch (Exception)
-                {
-                    return false;
-                }
-            }
+            return await Remove(entity.Id);
         }
 
         /// <summary>
@@ -184,18 +172,22 @@ namespace GlitchedPolygons.RepositoryPattern.SQLite
         /// <returns>Whether the entity could be removed successfully or not.</returns>
         public async Task<bool> Remove(T2 id)
         {
-            using (var sqlc = OpenConnection())
+            bool result = false;
+            IDbConnection sqlc = null;
+            try
             {
-                try
-                {
-                    int affectedRows = await sqlc.ExecuteAsync($"DELETE FROM \"{TableName}\" WHERE \"Id\" = @Id", new {Id = id});
-                    return affectedRows > 0;
-                }
-                catch (Exception)
-                {
-                    return false;
-                }
+                sqlc = OpenConnection();
+                result = await sqlc.ExecuteAsync($"DELETE FROM \"{TableName}\" WHERE \"Id\" = @Id", new {Id = id}) > 0;
             }
+            catch (Exception)
+            {
+                result = false;
+            }
+            finally
+            {
+                sqlc?.Dispose();
+            }
+            return result;
         }
 
         /// <summary>
@@ -204,18 +196,22 @@ namespace GlitchedPolygons.RepositoryPattern.SQLite
         /// <returns>Whether the entities were removed successfully or not. If the repository was already empty, <c>false</c> is returned (because nothing was actually &lt;&lt;removed&gt;&gt; ).</returns>
         public async Task<bool> RemoveAll()
         {
-            using (var sqlc = OpenConnection())
+            bool result = false;
+            IDbConnection sqlc = null;
+            try
             {
-                try
-                {
-                    int affectedRows = await sqlc.ExecuteAsync($"DELETE FROM \"{TableName}\"");
-                    return affectedRows > 0;
-                }
-                catch (Exception)
-                {
-                    return false;
-                }
+                sqlc = OpenConnection();
+                result = await sqlc.ExecuteAsync($"DELETE FROM \"{TableName}\"") > 0;
             }
+            catch (Exception)
+            {
+                result = false;
+            }
+            finally
+            {
+                sqlc?.Dispose();
+            }
+            return result;
         }
 
         /// <summary>
@@ -236,31 +232,7 @@ namespace GlitchedPolygons.RepositoryPattern.SQLite
         /// <returns>Whether all entities were removed successfully or not.</returns>
         public async Task<bool> RemoveRange(IEnumerable<T1> entities)
         {
-            try
-            {
-                bool success = true;
-                var tasks = new List<Task>(16);
-                foreach (var e in entities)
-                {
-                    tasks.Add(Task.Run(() =>
-                    {
-                        using (var sqlc = OpenConnection())
-                        {
-                            if (sqlc.Execute($"DELETE FROM \"{TableName}\" WHERE \"Id\" = @Id", new {Id = e.Id}) <= 0)
-                            {
-                                success = false;
-                            }
-                        }
-                    }));
-                }
-
-                await Task.WhenAll(tasks);
-                return success;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
+            return await RemoveRange(entities.Select(e => e.Id));
         }
 
         /// <summary>
@@ -270,31 +242,36 @@ namespace GlitchedPolygons.RepositoryPattern.SQLite
         /// <returns>Whether all entities were removed successfully or not.</returns>
         public async Task<bool> RemoveRange(IEnumerable<T2> ids)
         {
+            bool result = false;
+            IDbConnection sqlc = null;
             try
             {
-                bool success = true;
-                var tasks = new List<Task>(16);
+                var sql = new StringBuilder(256)
+                    .Append("DELETE FROM ")
+                    .Append('\"')
+                    .Append(TableName)
+                    .Append('\"')
+                    .Append(" WHERE \"Id\" IN (");
+
                 foreach (T2 id in ids)
                 {
-                    tasks.Add(Task.Run(() =>
-                    {
-                        using (var sqlc = OpenConnection())
-                        {
-                            if (sqlc.Execute($"DELETE FROM \"{TableName}\" WHERE \"Id\" = @Id", new {Id = id}) <= 0)
-                            {
-                                success = false;
-                            }
-                        }
-                    }));
+                    sql.Append('\'').Append(id).Append('\'').Append(", ");
                 }
 
-                await Task.WhenAll(tasks);
-                return success;
+                string sqlString = sql.Append(");").ToString();
+                
+                sqlc = OpenConnection();
+                result = await sqlc.ExecuteAsync(sqlString) > 0;
             }
             catch (Exception)
             {
-                return false;
+                result = false;
             }
+            finally
+            {
+                sqlc?.Dispose();
+            }
+            return result;
         }
     }
 }

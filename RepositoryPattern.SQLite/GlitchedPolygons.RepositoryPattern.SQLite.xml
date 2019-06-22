@@ -34,7 +34,7 @@
         </member>
         <member name="M:GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.Get(`1)">
             <summary>
-            Gets an entity by its unique identifier.
+            Gets an entity asynchronously by its unique identifier.
             </summary>
             <param name="id">The entity's unique identifier.</param>
             <returns>The first found <see cref="T:GlitchedPolygons.RepositoryPattern.IEntity`1" />; <c>null</c> if nothing was found.</returns>
