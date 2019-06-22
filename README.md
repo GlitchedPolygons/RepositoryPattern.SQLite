@@ -8,4 +8,8 @@ Abstract base class for SQLite repositories.
 
 Makes use of the https://github.com/GlitchedPolygons/RepositoryPattern package.
 
+If you want to clone and work on this, make sure that you have [git lfs installed and setup](https://github.com/git-lfs/git-lfs/wiki/Installation) (otherwise the unit tests won't pass because the test .db file is binary).
+
+---
+
 More information regarding SQLite itself can be found on www.sqlite.org
