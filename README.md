@@ -1,7 +1,7 @@
 # RepositoryPattern.SQLite
 
 [![NuGet](https://img.shields.io/nuget/v/GlitchedPolygons.RepositoryPattern.SQLite.svg)](https://www.nuget.org/packages/GlitchedPolygons.RepositoryPattern.SQLite) 
-[![API](https://img.shields.io/badge/api-docs-brightgreen.svg)](https://glitchedpolygons.github.io/RepositoryPattern.SQLite/api/index.html)
+[![API](https://img.shields.io/badge/api-docs-informational.svg)](https://glitchedpolygons.github.io/RepositoryPattern.SQLite/api/index.html)
 [![Build Status](https://travis-ci.org/GlitchedPolygons/RepositoryPattern.SQLite.svg?branch=master)](https://travis-ci.org/GlitchedPolygons/RepositoryPattern.SQLite) 
 [![CircleCI](https://circleci.com/gh/GlitchedPolygons/RepositoryPattern.SQLite/tree/master.svg?style=shield)](https://circleci.com/gh/GlitchedPolygons/RepositoryPattern.SQLite/tree/master)
 
