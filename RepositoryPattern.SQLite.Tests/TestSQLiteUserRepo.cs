@@ -1,11 +1,10 @@
+using Dapper;
 using System;
-using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using Dapper;
-using GlitchedPolygons.RepositoryPattern.SQLite;
+using System.Collections.Generic;
 
-namespace UnitTests
+namespace GlitchedPolygons.RepositoryPattern.SQLite.Tests
 {
     public class TestSQLiteUserRepo : SQLiteRepository<User, string>
     {

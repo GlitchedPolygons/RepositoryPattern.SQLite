@@ -5,16 +5,15 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 
 using Xunit;
-using GlitchedPolygons.RepositoryPattern.SQLite;
 
-namespace UnitTests
+namespace GlitchedPolygons.RepositoryPattern.SQLite.Tests
 {
-    public class UnitTests
+    public class SQLiteRepositoryTests
     {
         private readonly string path;
         private readonly SQLiteRepository<User, string> repo;
         
-        public UnitTests()
+        public SQLiteRepositoryTests()
         {
             path = Path.Combine(Environment.CurrentDirectory, "TestDatabase.db");
             repo = new TestSQLiteUserRepo($"Data Source={path};Version=3;");

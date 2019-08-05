@@ -2,8 +2,11 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp2.2</TargetFramework>
-
         <IsPackable>false</IsPackable>
+        <RootNamespace>GlitchedPolygons.RepositoryPattern.SQLite.Tests</RootNamespace>
+        <AssemblyName>GlitchedPolygons.RepositoryPattern.SQLite.Tests</AssemblyName>
+        <PackageId>GlitchedPolygons.RepositoryPattern.SQLite.Tests</PackageId>
+        <Authors />
     </PropertyGroup>
 
     <ItemGroup>

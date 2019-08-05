@@ -1,6 +1,4 @@
-using GlitchedPolygons.RepositoryPattern;
-
-namespace UnitTests
+namespace GlitchedPolygons.RepositoryPattern.SQLite.Tests
 {
     public class User : IEntity<string>
     {

@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Title>GlitchedPolygons.RepositoryPattern.SQLite</Title>
     <AssemblyName>GlitchedPolygons.RepositoryPattern.SQLite</AssemblyName>
     <RootNamespace>GlitchedPolygons.RepositoryPattern.SQLite</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -12,17 +13,18 @@
     <PackageIconUrl>https://raw.githubusercontent.com/GlitchedPolygons/RepositoryPattern/4d8816f64c600fcfb30d1f93d4bd2354d7f6df40/icon.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/GlitchedPolygons/RepositoryPattern.SQLite</RepositoryUrl>
     <PackageTags>c# repository design pattern base interface declaration db database access abstraction repositories sql relational rdbms dbms sqlite embedded</PackageTags>
-    <Version>1.0.1</Version>
-    <PackageReleaseNotes>Added icon</PackageReleaseNotes>
-    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <Version>1.0.2</Version>
+    <PackageVersion>1.0.2</PackageVersion>
+    <PackageReleaseNotes/>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>C:\git\glitched-polygons\nuget\RepositoryPattern.SQLite\RepositoryPattern.SQLite\GlitchedPolygons.RepositoryPattern.SQLite.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\netstandard2.0\GlitchedPolygons.RepositoryPattern.SQLite.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>C:\git\glitched-polygons\nuget\RepositoryPattern.SQLite\RepositoryPattern.SQLite\GlitchedPolygons.RepositoryPattern.SQLite.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netstandard2.0\GlitchedPolygons.RepositoryPattern.SQLite.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

@@ -13,6 +13,6 @@ install:
   - dotnet restore ./RepositoryPattern.SQLite.sln
 script:
   - dotnet restore ./RepositoryPattern.SQLite.sln
-  - cd UnitTests/
+  - cd RepositoryPattern.SQLite.Tests/
   - dotnet test
   
