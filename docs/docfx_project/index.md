@@ -4,4 +4,3 @@
 ---
 
 * Namespace:  _`GlitchedPolygons.RepositoryPattern.SQLite`_
-* API Version:  _`1.0.0`_

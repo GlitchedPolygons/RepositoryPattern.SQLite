@@ -50,13 +50,13 @@ references:
   fullName.vb: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository(Of T1, T2).Add
   nameWithType: SQLiteRepository<T1, T2>.Add
   nameWithType.vb: SQLiteRepository(Of T1, T2).Add
-- uid: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.AddRange(System.Collections.Generic.IEnumerable{`0})
+- uid: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.AddRange(IEnumerable{`0})
   name: AddRange(IEnumerable<T1>)
-  href: api/GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository-2.html#GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_AddRange_System_Collections_Generic_IEnumerable__0__
-  commentId: M:GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.AddRange(System.Collections.Generic.IEnumerable{`0})
+  href: api/GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository-2.html#GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_AddRange_IEnumerable__0__
+  commentId: M:GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.AddRange(IEnumerable{`0})
   name.vb: AddRange(IEnumerable(Of T1))
-  fullName: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository<T1, T2>.AddRange(System.Collections.Generic.IEnumerable<T1>)
-  fullName.vb: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository(Of T1, T2).AddRange(System.Collections.Generic.IEnumerable(Of T1))
+  fullName: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository<T1, T2>.AddRange(IEnumerable<T1>)
+  fullName.vb: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository(Of T1, T2).AddRange(IEnumerable(Of T1))
   nameWithType: SQLiteRepository<T1, T2>.AddRange(IEnumerable<T1>)
   nameWithType.vb: SQLiteRepository(Of T1, T2).AddRange(IEnumerable(Of T1))
 - uid: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.AddRange*
@@ -68,13 +68,13 @@ references:
   fullName.vb: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository(Of T1, T2).AddRange
   nameWithType: SQLiteRepository<T1, T2>.AddRange
   nameWithType.vb: SQLiteRepository(Of T1, T2).AddRange
-- uid: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.Find(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+- uid: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.Find(Expression{Func{`0,System.Boolean}})
   name: Find(Expression<Func<T1, Boolean>>)
-  href: api/GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository-2.html#GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_Find_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___
-  commentId: M:GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.Find(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+  href: api/GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository-2.html#GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_Find_Expression_Func__0_System_Boolean___
+  commentId: M:GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.Find(Expression{Func{`0,System.Boolean}})
   name.vb: Find(Expression(Of Func(Of T1, Boolean)))
-  fullName: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository<T1, T2>.Find(System.Linq.Expressions.Expression<System.Func<T1, System.Boolean>>)
-  fullName.vb: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository(Of T1, T2).Find(System.Linq.Expressions.Expression(Of System.Func(Of T1, System.Boolean)))
+  fullName: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository<T1, T2>.Find(Expression<Func<T1, System.Boolean>>)
+  fullName.vb: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository(Of T1, T2).Find(Expression(Of Func(Of T1, System.Boolean)))
   nameWithType: SQLiteRepository<T1, T2>.Find(Expression<Func<T1, Boolean>>)
   nameWithType.vb: SQLiteRepository(Of T1, T2).Find(Expression(Of Func(Of T1, Boolean)))
 - uid: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.Find*
@@ -197,33 +197,33 @@ references:
   fullName.vb: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository(Of T1, T2).RemoveAll
   nameWithType: SQLiteRepository<T1, T2>.RemoveAll
   nameWithType.vb: SQLiteRepository(Of T1, T2).RemoveAll
-- uid: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.RemoveRange(System.Collections.Generic.IEnumerable{`0})
-  name: RemoveRange(IEnumerable<T1>)
-  href: api/GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository-2.html#GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_RemoveRange_System_Collections_Generic_IEnumerable__0__
-  commentId: M:GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.RemoveRange(System.Collections.Generic.IEnumerable{`0})
-  name.vb: RemoveRange(IEnumerable(Of T1))
-  fullName: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository<T1, T2>.RemoveRange(System.Collections.Generic.IEnumerable<T1>)
-  fullName.vb: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository(Of T1, T2).RemoveRange(System.Collections.Generic.IEnumerable(Of T1))
-  nameWithType: SQLiteRepository<T1, T2>.RemoveRange(IEnumerable<T1>)
-  nameWithType.vb: SQLiteRepository(Of T1, T2).RemoveRange(IEnumerable(Of T1))
-- uid: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.RemoveRange(System.Collections.Generic.IEnumerable{`1})
-  name: RemoveRange(IEnumerable<T2>)
-  href: api/GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository-2.html#GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_RemoveRange_System_Collections_Generic_IEnumerable__1__
-  commentId: M:GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.RemoveRange(System.Collections.Generic.IEnumerable{`1})
-  name.vb: RemoveRange(IEnumerable(Of T2))
-  fullName: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository<T1, T2>.RemoveRange(System.Collections.Generic.IEnumerable<T2>)
-  fullName.vb: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository(Of T1, T2).RemoveRange(System.Collections.Generic.IEnumerable(Of T2))
-  nameWithType: SQLiteRepository<T1, T2>.RemoveRange(IEnumerable<T2>)
-  nameWithType.vb: SQLiteRepository(Of T1, T2).RemoveRange(IEnumerable(Of T2))
-- uid: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.RemoveRange(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+- uid: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.RemoveRange(Expression{Func{`0,System.Boolean}})
   name: RemoveRange(Expression<Func<T1, Boolean>>)
-  href: api/GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository-2.html#GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_RemoveRange_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___
-  commentId: M:GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.RemoveRange(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+  href: api/GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository-2.html#GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_RemoveRange_Expression_Func__0_System_Boolean___
+  commentId: M:GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.RemoveRange(Expression{Func{`0,System.Boolean}})
   name.vb: RemoveRange(Expression(Of Func(Of T1, Boolean)))
-  fullName: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository<T1, T2>.RemoveRange(System.Linq.Expressions.Expression<System.Func<T1, System.Boolean>>)
-  fullName.vb: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository(Of T1, T2).RemoveRange(System.Linq.Expressions.Expression(Of System.Func(Of T1, System.Boolean)))
+  fullName: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository<T1, T2>.RemoveRange(Expression<Func<T1, System.Boolean>>)
+  fullName.vb: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository(Of T1, T2).RemoveRange(Expression(Of Func(Of T1, System.Boolean)))
   nameWithType: SQLiteRepository<T1, T2>.RemoveRange(Expression<Func<T1, Boolean>>)
   nameWithType.vb: SQLiteRepository(Of T1, T2).RemoveRange(Expression(Of Func(Of T1, Boolean)))
+- uid: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.RemoveRange(IEnumerable{`0})
+  name: RemoveRange(IEnumerable<T1>)
+  href: api/GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository-2.html#GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_RemoveRange_IEnumerable__0__
+  commentId: M:GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.RemoveRange(IEnumerable{`0})
+  name.vb: RemoveRange(IEnumerable(Of T1))
+  fullName: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository<T1, T2>.RemoveRange(IEnumerable<T1>)
+  fullName.vb: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository(Of T1, T2).RemoveRange(IEnumerable(Of T1))
+  nameWithType: SQLiteRepository<T1, T2>.RemoveRange(IEnumerable<T1>)
+  nameWithType.vb: SQLiteRepository(Of T1, T2).RemoveRange(IEnumerable(Of T1))
+- uid: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.RemoveRange(IEnumerable{`1})
+  name: RemoveRange(IEnumerable<T2>)
+  href: api/GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository-2.html#GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_RemoveRange_IEnumerable__1__
+  commentId: M:GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.RemoveRange(IEnumerable{`1})
+  name.vb: RemoveRange(IEnumerable(Of T2))
+  fullName: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository<T1, T2>.RemoveRange(IEnumerable<T2>)
+  fullName.vb: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository(Of T1, T2).RemoveRange(IEnumerable(Of T2))
+  nameWithType: SQLiteRepository<T1, T2>.RemoveRange(IEnumerable<T2>)
+  nameWithType.vb: SQLiteRepository(Of T1, T2).RemoveRange(IEnumerable(Of T2))
 - uid: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.RemoveRange*
   name: RemoveRange
   href: api/GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository-2.html#GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_RemoveRange_
@@ -233,13 +233,13 @@ references:
   fullName.vb: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository(Of T1, T2).RemoveRange
   nameWithType: SQLiteRepository<T1, T2>.RemoveRange
   nameWithType.vb: SQLiteRepository(Of T1, T2).RemoveRange
-- uid: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.SingleOrDefault(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+- uid: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.SingleOrDefault(Expression{Func{`0,System.Boolean}})
   name: SingleOrDefault(Expression<Func<T1, Boolean>>)
-  href: api/GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository-2.html#GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_SingleOrDefault_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___
-  commentId: M:GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.SingleOrDefault(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+  href: api/GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository-2.html#GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_SingleOrDefault_Expression_Func__0_System_Boolean___
+  commentId: M:GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.SingleOrDefault(Expression{Func{`0,System.Boolean}})
   name.vb: SingleOrDefault(Expression(Of Func(Of T1, Boolean)))
-  fullName: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository<T1, T2>.SingleOrDefault(System.Linq.Expressions.Expression<System.Func<T1, System.Boolean>>)
-  fullName.vb: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository(Of T1, T2).SingleOrDefault(System.Linq.Expressions.Expression(Of System.Func(Of T1, System.Boolean)))
+  fullName: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository<T1, T2>.SingleOrDefault(Expression<Func<T1, System.Boolean>>)
+  fullName.vb: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository(Of T1, T2).SingleOrDefault(Expression(Of Func(Of T1, System.Boolean)))
   nameWithType: SQLiteRepository<T1, T2>.SingleOrDefault(Expression<Func<T1, Boolean>>)
   nameWithType.vb: SQLiteRepository(Of T1, T2).SingleOrDefault(Expression(Of Func(Of T1, Boolean)))
 - uid: GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.SingleOrDefault*

@@ -74,41 +74,13 @@
   <h1 id="GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2" data-uid="GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2" class="text-break">Class SQLiteRepository&lt;T1, T2&gt;
   </h1>
   <div class="markdown level0 summary"><p>Repository base class for SQLite databases.
-Implements the <span class="xref">GlitchedPolygons.RepositoryPattern.IRepository&lt;T1, T2&gt;</span> interface.</p>
+Implements the <see cref="!:IRepository&lt;T1, T2>"></see> interface.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">SQLiteRepository&lt;T1, T2&gt;</span></div>
-  </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">GlitchedPolygons.RepositoryPattern.IRepository</span>&lt;T1, T2&gt;</div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="GlitchedPolygons.RepositoryPattern.SQLite.html">GlitchedPolygons.RepositoryPattern.SQLite</a></h6>
   <h6><strong>Assembly</strong>: GlitchedPolygons.RepositoryPattern.SQLite.dll</h6>
@@ -226,7 +198,7 @@ Implements the <span class="xref">GlitchedPolygons.RepositoryPattern.IRepository
     <tbody>
       <tr>
         <td><span class="xref">T1</span></td>
-        <td><p>The first found <span class="xref">GlitchedPolygons.RepositoryPattern.IEntity&lt;T&gt;</span>; <code>null</code> if nothing was found.</p>
+        <td><p>The first found <span class="xref">GlitchedPolygons.RepositoryPattern.IEntity`1</span>; <code>null</code> if nothing was found.</p>
 </td>
       </tr>
     </tbody>
@@ -274,7 +246,7 @@ Implements the <span class="xref">GlitchedPolygons.RepositoryPattern.IRepository
   <a id="GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_Add_" data-uid="GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.Add*"></a>
   <h4 id="GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_Add__0_" data-uid="GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.Add(`0)">Add(T1)</h4>
   <div class="markdown level1 summary"><p>Adds the specified entity to the data repository. <p> </p>
-You need to ENSURE the uniqueness of the addendum <span class="xref">GlitchedPolygons.RepositoryPattern.IEntity`1.Id</span>!</p>
+You need to ENSURE the uniqueness of the addendum <see cref="!:IEntity&lt;T>.Id"></see>!</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -309,7 +281,7 @@ You need to ENSURE the uniqueness of the addendum <span class="xref">GlitchedPol
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td><p>Whether the entity could be added successfully or not.</p>
 </td>
       </tr>
@@ -317,15 +289,15 @@ You need to ENSURE the uniqueness of the addendum <span class="xref">GlitchedPol
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GlitchedPolygons/RepositoryPattern.SQLite/new/master/apiSpec/new?filename=GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_AddRange_System_Collections_Generic_IEnumerable__0__.md&amp;value=---%0Auid%3A%20GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository%602.AddRange(System.Collections.Generic.IEnumerable%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/GlitchedPolygons/RepositoryPattern.SQLite/new/master/apiSpec/new?filename=GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_AddRange_IEnumerable__0__.md&amp;value=---%0Auid%3A%20GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository%602.AddRange(IEnumerable%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/GlitchedPolygons/RepositoryPattern.SQLite/blob/master/RepositoryPattern.SQLite/SQLiteRepository.cs/#L149">View Source</a>
   </span>
   <a id="GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_AddRange_" data-uid="GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.AddRange*"></a>
-  <h4 id="GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_AddRange_System_Collections_Generic_IEnumerable__0__" data-uid="GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.AddRange(System.Collections.Generic.IEnumerable{`0})">AddRange(IEnumerable&lt;T1&gt;)</h4>
+  <h4 id="GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_AddRange_IEnumerable__0__" data-uid="GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.AddRange(IEnumerable{`0})">AddRange(IEnumerable&lt;T1&gt;)</h4>
   <div class="markdown level1 summary"><p>Adds multiple entities at once.<p> </p>
-You need to ENSURE the uniqueness of each added <span class="xref">GlitchedPolygons.RepositoryPattern.IEntity`1.Id</span>!</p>
+You need to ENSURE the uniqueness of each added <see cref="!:IEntity&lt;T>.Id"></see>!</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -343,7 +315,7 @@ You need to ENSURE the uniqueness of each added <span class="xref">GlitchedPolyg
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T1&gt;</td>
+        <td><span class="xref">IEnumerable</span>&lt;T1&gt;</td>
         <td><span class="parametername">entities</span></td>
         <td><p>The entities to add.</p>
 </td>
@@ -360,7 +332,7 @@ You need to ENSURE the uniqueness of each added <span class="xref">GlitchedPolyg
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td><p>Whether the entities were added successfully or not.</p>
 </td>
       </tr>
@@ -368,13 +340,13 @@ You need to ENSURE the uniqueness of each added <span class="xref">GlitchedPolyg
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GlitchedPolygons/RepositoryPattern.SQLite/new/master/apiSpec/new?filename=GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_Find_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___.md&amp;value=---%0Auid%3A%20GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository%602.Find(System.Linq.Expressions.Expression%7BSystem.Func%7B%600%2CSystem.Boolean%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/GlitchedPolygons/RepositoryPattern.SQLite/new/master/apiSpec/new?filename=GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_Find_Expression_Func__0_System_Boolean___.md&amp;value=---%0Auid%3A%20GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository%602.Find(Expression%7BFunc%7B%600%2CSystem.Boolean%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/GlitchedPolygons/RepositoryPattern.SQLite/blob/master/RepositoryPattern.SQLite/SQLiteRepository.cs/#L122">View Source</a>
   </span>
   <a id="GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_Find_" data-uid="GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.Find*"></a>
-  <h4 id="GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_Find_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___" data-uid="GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.Find(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">Find(Expression&lt;Func&lt;T1, Boolean&gt;&gt;)</h4>
+  <h4 id="GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_Find_Expression_Func__0_System_Boolean___" data-uid="GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.Find(Expression{Func{`0,System.Boolean}})">Find(Expression&lt;Func&lt;T1, Boolean&gt;&gt;)</h4>
   <div class="markdown level1 summary"><p>Finds all entities according to the specified predicate <span class="xref">System.Linq.Expressions.Expression</span>.<p> </p>
 WARNING: Can be very slow! For specialized queries, just create a new repository! Derive from this class and create custom SQL queries that return the mapped types that you need.</p>
 </div>
@@ -394,7 +366,7 @@ WARNING: Can be very slow! For specialized queries, just create a new repository
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Linq.Expressions.Expression</span>&lt;<span class="xref">System.Func</span>&lt;T1, <span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Expression</span>&lt;<span class="xref">Func</span>&lt;T1, <span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td><span class="parametername">predicate</span></td>
         <td><p>The search predicate (all entities that match the provided conditions will be added to the query's result).</p>
 </td>
@@ -411,8 +383,8 @@ WARNING: Can be very slow! For specialized queries, just create a new repository
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T1&gt;&gt;</td>
-        <td><p>The found entities (<span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>).</p>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IEnumerable</span>&lt;T1&gt;&gt;</td>
+        <td><p>The found entities (<span class="xref">System.Collections.Generic.IEnumerable`1</span>).</p>
 </td>
       </tr>
     </tbody>
@@ -461,8 +433,8 @@ WARNING: Can be very slow! For specialized queries, just create a new repository
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;T1&gt;</td>
-        <td><p>The first found <span class="xref">GlitchedPolygons.RepositoryPattern.IEntity&lt;T&gt;</span>; <code>null</code> if nothing was found.</p>
+        <td><span class="xref">Task</span>&lt;T1&gt;</td>
+        <td><p>The first found <span class="xref">GlitchedPolygons.RepositoryPattern.IEntity`1</span>; <code>null</code> if nothing was found.</p>
 </td>
       </tr>
     </tbody>
@@ -493,7 +465,7 @@ WARNING: Can be very slow! For specialized queries, just create a new repository
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T1&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IEnumerable</span>&lt;T1&gt;&gt;</td>
         <td><p>All entities inside the repo.</p>
 </td>
       </tr>
@@ -508,7 +480,7 @@ WARNING: Can be very slow! For specialized queries, just create a new repository
   </span>
   <a id="GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_OpenConnection_" data-uid="GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.OpenConnection*"></a>
   <h4 id="GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_OpenConnection" data-uid="GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.OpenConnection">OpenConnection()</h4>
-  <div class="markdown level1 summary"><p>Opens a <span class="xref">System.Data.IDbConnection</span> to the SQLite database. <p> </p>
+  <div class="markdown level1 summary"><p>Opens a <see cref="!:IDbConnection"></see> to the SQLite database. <p> </p>
 Does not dispose automatically: make sure to wrap your usage into a <see langowrd="using"></see> block.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -526,8 +498,8 @@ Does not dispose automatically: make sure to wrap your usage into a <see langowr
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Data.IDbConnection</span></td>
-        <td><p>The opened <span class="xref">System.Data.IDbConnection</span> (remember to dispose of it asap after you're done!).</p>
+        <td><span class="xref">IDbConnection</span></td>
+        <td><p>The opened <see cref="!:IDbConnection"></see> (remember to dispose of it asap after you're done!).</p>
 </td>
       </tr>
     </tbody>
@@ -576,7 +548,7 @@ Does not dispose automatically: make sure to wrap your usage into a <see langowr
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td><p>Whether the entity could be removed successfully or not.</p>
 </td>
       </tr>
@@ -626,7 +598,7 @@ Does not dispose automatically: make sure to wrap your usage into a <see langowr
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td><p>Whether the entity could be removed successfully or not.</p>
 </td>
       </tr>
@@ -658,7 +630,7 @@ Does not dispose automatically: make sure to wrap your usage into a <see langowr
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td><p>Whether the entities were removed successfully or not. If the repository was already empty, <code>false</code> is returned (because nothing was actually &lt;&lt;removed&gt;&gt; ).</p>
 </td>
       </tr>
@@ -666,113 +638,13 @@ Does not dispose automatically: make sure to wrap your usage into a <see langowr
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GlitchedPolygons/RepositoryPattern.SQLite/new/master/apiSpec/new?filename=GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_RemoveRange_System_Collections_Generic_IEnumerable__0__.md&amp;value=---%0Auid%3A%20GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository%602.RemoveRange(System.Collections.Generic.IEnumerable%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GlitchedPolygons/RepositoryPattern.SQLite/blob/master/RepositoryPattern.SQLite/SQLiteRepository.cs/#L233">View Source</a>
-  </span>
-  <a id="GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_RemoveRange_" data-uid="GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.RemoveRange*"></a>
-  <h4 id="GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_RemoveRange_System_Collections_Generic_IEnumerable__0__" data-uid="GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.RemoveRange(System.Collections.Generic.IEnumerable{`0})">RemoveRange(IEnumerable&lt;T1&gt;)</h4>
-  <div class="markdown level1 summary"><p>Removes the range of entities from the repository.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; RemoveRange(IEnumerable&lt;T1&gt; entities)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T1&gt;</td>
-        <td><span class="parametername">entities</span></td>
-        <td><p>The entities to remove.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-        <td><p>Whether all entities were removed successfully or not.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/GlitchedPolygons/RepositoryPattern.SQLite/new/master/apiSpec/new?filename=GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_RemoveRange_System_Collections_Generic_IEnumerable__1__.md&amp;value=---%0Auid%3A%20GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository%602.RemoveRange(System.Collections.Generic.IEnumerable%7B%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GlitchedPolygons/RepositoryPattern.SQLite/blob/master/RepositoryPattern.SQLite/SQLiteRepository.cs/#L243">View Source</a>
-  </span>
-  <a id="GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_RemoveRange_" data-uid="GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.RemoveRange*"></a>
-  <h4 id="GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_RemoveRange_System_Collections_Generic_IEnumerable__1__" data-uid="GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.RemoveRange(System.Collections.Generic.IEnumerable{`1})">RemoveRange(IEnumerable&lt;T2&gt;)</h4>
-  <div class="markdown level1 summary"><p>Removes the range of entities from the repository.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; RemoveRange(IEnumerable&lt;T2&gt; ids)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T2&gt;</td>
-        <td><span class="parametername">ids</span></td>
-        <td><p>The unique ids of the entities to remove.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-        <td><p>Whether all entities were removed successfully or not.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/GlitchedPolygons/RepositoryPattern.SQLite/new/master/apiSpec/new?filename=GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_RemoveRange_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___.md&amp;value=---%0Auid%3A%20GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository%602.RemoveRange(System.Linq.Expressions.Expression%7BSystem.Func%7B%600%2CSystem.Boolean%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/GlitchedPolygons/RepositoryPattern.SQLite/new/master/apiSpec/new?filename=GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_RemoveRange_Expression_Func__0_System_Boolean___.md&amp;value=---%0Auid%3A%20GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository%602.RemoveRange(Expression%7BFunc%7B%600%2CSystem.Boolean%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/GlitchedPolygons/RepositoryPattern.SQLite/blob/master/RepositoryPattern.SQLite/SQLiteRepository.cs/#L223">View Source</a>
   </span>
   <a id="GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_RemoveRange_" data-uid="GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.RemoveRange*"></a>
-  <h4 id="GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_RemoveRange_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___" data-uid="GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.RemoveRange(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">RemoveRange(Expression&lt;Func&lt;T1, Boolean&gt;&gt;)</h4>
+  <h4 id="GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_RemoveRange_Expression_Func__0_System_Boolean___" data-uid="GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.RemoveRange(Expression{Func{`0,System.Boolean}})">RemoveRange(Expression&lt;Func&lt;T1, Boolean&gt;&gt;)</h4>
   <div class="markdown level1 summary"><p>Removes all entities that match the specified conditions (via the predicate <span class="xref">System.Linq.Expressions.Expression</span> parameter).<p> </p>
 WARNING: Can be slow. If you know the entities' id, please use the other RemoveRange overloads!</p>
 </div>
@@ -792,7 +664,7 @@ WARNING: Can be slow. If you know the entities' id, please use the other RemoveR
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Linq.Expressions.Expression</span>&lt;<span class="xref">System.Func</span>&lt;T1, <span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Expression</span>&lt;<span class="xref">Func</span>&lt;T1, <span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td><span class="parametername">predicate</span></td>
         <td><p>The predicate <span class="xref">System.Linq.Expressions.Expression</span> that defines which entities should be removed.</p>
 </td>
@@ -809,7 +681,7 @@ WARNING: Can be slow. If you know the entities' id, please use the other RemoveR
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td><p>Whether the entities were removed successfully or not.</p>
 </td>
       </tr>
@@ -817,13 +689,113 @@ WARNING: Can be slow. If you know the entities' id, please use the other RemoveR
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GlitchedPolygons/RepositoryPattern.SQLite/new/master/apiSpec/new?filename=GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_SingleOrDefault_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___.md&amp;value=---%0Auid%3A%20GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository%602.SingleOrDefault(System.Linq.Expressions.Expression%7BSystem.Func%7B%600%2CSystem.Boolean%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/GlitchedPolygons/RepositoryPattern.SQLite/new/master/apiSpec/new?filename=GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_RemoveRange_IEnumerable__0__.md&amp;value=---%0Auid%3A%20GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository%602.RemoveRange(IEnumerable%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/RepositoryPattern.SQLite/blob/master/RepositoryPattern.SQLite/SQLiteRepository.cs/#L233">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_RemoveRange_" data-uid="GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.RemoveRange*"></a>
+  <h4 id="GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_RemoveRange_IEnumerable__0__" data-uid="GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.RemoveRange(IEnumerable{`0})">RemoveRange(IEnumerable&lt;T1&gt;)</h4>
+  <div class="markdown level1 summary"><p>Removes the range of entities from the repository.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; RemoveRange(IEnumerable&lt;T1&gt; entities)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;T1&gt;</td>
+        <td><span class="parametername">entities</span></td>
+        <td><p>The entities to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><p>Whether all entities were removed successfully or not.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/RepositoryPattern.SQLite/new/master/apiSpec/new?filename=GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_RemoveRange_IEnumerable__1__.md&amp;value=---%0Auid%3A%20GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository%602.RemoveRange(IEnumerable%7B%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GlitchedPolygons/RepositoryPattern.SQLite/blob/master/RepositoryPattern.SQLite/SQLiteRepository.cs/#L243">View Source</a>
+  </span>
+  <a id="GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_RemoveRange_" data-uid="GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.RemoveRange*"></a>
+  <h4 id="GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_RemoveRange_IEnumerable__1__" data-uid="GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.RemoveRange(IEnumerable{`1})">RemoveRange(IEnumerable&lt;T2&gt;)</h4>
+  <div class="markdown level1 summary"><p>Removes the range of entities from the repository.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; RemoveRange(IEnumerable&lt;T2&gt; ids)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;T2&gt;</td>
+        <td><span class="parametername">ids</span></td>
+        <td><p>The unique ids of the entities to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><p>Whether all entities were removed successfully or not.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GlitchedPolygons/RepositoryPattern.SQLite/new/master/apiSpec/new?filename=GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_SingleOrDefault_Expression_Func__0_System_Boolean___.md&amp;value=---%0Auid%3A%20GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository%602.SingleOrDefault(Expression%7BFunc%7B%600%2CSystem.Boolean%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/GlitchedPolygons/RepositoryPattern.SQLite/blob/master/RepositoryPattern.SQLite/SQLiteRepository.cs/#L103">View Source</a>
   </span>
   <a id="GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_SingleOrDefault_" data-uid="GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.SingleOrDefault*"></a>
-  <h4 id="GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_SingleOrDefault_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___" data-uid="GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.SingleOrDefault(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">SingleOrDefault(Expression&lt;Func&lt;T1, Boolean&gt;&gt;)</h4>
+  <h4 id="GlitchedPolygons_RepositoryPattern_SQLite_SQLiteRepository_2_SingleOrDefault_Expression_Func__0_System_Boolean___" data-uid="GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository`2.SingleOrDefault(Expression{Func{`0,System.Boolean}})">SingleOrDefault(Expression&lt;Func&lt;T1, Boolean&gt;&gt;)</h4>
   <div class="markdown level1 summary"><p>Gets a single entity from the repo according to the specified predicate condition.<p> </p>
 If 0 or &gt;1 entities are found, <code>null</code> is returned.<p> </p>
 WARNING: Can be very slow! For specialized queries, just create a new repository! Derive from this class and create custom SQL queries that return the mapped types that you need.</p>
@@ -844,7 +816,7 @@ WARNING: Can be very slow! For specialized queries, just create a new repository
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Linq.Expressions.Expression</span>&lt;<span class="xref">System.Func</span>&lt;T1, <span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Expression</span>&lt;<span class="xref">Func</span>&lt;T1, <span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td><span class="parametername">predicate</span></td>
         <td><p>The search predicate.</p>
 </td>
@@ -861,7 +833,7 @@ WARNING: Can be very slow! For specialized queries, just create a new repository
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;T1&gt;</td>
+        <td><span class="xref">Task</span>&lt;T1&gt;</td>
         <td><p>Single found entity; <code>default(<code data-dev-comment-type="typeparamref" class="typeparamref">T1</code>)</code> (usually this is <code>null</code>) if 0 or &gt;1 entities were found.</p>
 </td>
       </tr>
@@ -911,20 +883,12 @@ WARNING: Can be very slow! For specialized queries, just create a new repository
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td><p>Whether the entity could be updated successfully or not.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">GlitchedPolygons.RepositoryPattern.IRepository&lt;T1, T2&gt;</span>
-  </div>
-  <h3 id="seealso">See Also</h3>
-  <div class="seealso">
-      <div><span class="xref">GlitchedPolygons.RepositoryPattern.IRepository</span>&lt;T1, T2&gt;</div>
-  </div>
 </article>
           </div>
           

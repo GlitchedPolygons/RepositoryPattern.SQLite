@@ -12,10 +12,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.RepositoryPattern.SQLite.SQLiteRepository-2.html",
-          "hash": "EZi55ahIo5HILSNvGGTntg=="
+          "hash": "LkRMbhTU5EE+xYDFRLkydg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -24,10 +24,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GlitchedPolygons.RepositoryPattern.SQLite.html",
-          "hash": "LN58maff1chm0k0uhTAjNA=="
+          "hash": "V4ZCVRy/SfX5MY0IWHw0wA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -39,7 +39,7 @@
           "hash": "roawc+O7/ZKWn3fm5aXZ3Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -60,10 +60,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "xjG4WWhyuGYxgiR92PcQ1A=="
+          "hash": "FbXtuh/wWUMjfOp+pAWCeQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -87,10 +87,10 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "nQeMiiQX1bd0mjfk2oijCA=="
+          "hash": "d5UqQzEsv+h3jK73JQf83Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -109,10 +109,12 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
         "TocDocumentProcessor": {
@@ -123,23 +125,23 @@
           "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 3,
-          "skipped_file_count": 3
+          "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 2,
-          "skipped_file_count": 2
+          "skipped_file_count": 0
         }
       }
     },
     {
       "status": {
-        "can_incremental": true,
-        "details": "Can support incremental post processing.",
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0
