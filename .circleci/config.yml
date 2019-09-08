@@ -21,4 +21,4 @@ jobs:
           command: dotnet restore
       - run:
           name: Run xunit tests
-          command: dotnet test RepositoryPattern.SQLite.Tests/RepositoryPattern.SQLite.Tests.csproj
+          command: cd tests && dotnet test

@@ -10,9 +10,9 @@ notifications:
 before_install:
   - git lfs pull
 install:
-  - dotnet restore ./RepositoryPattern.SQLite.sln
+  - dotnet restore
 script:
-  - dotnet restore ./RepositoryPattern.SQLite.sln
-  - cd RepositoryPattern.SQLite.Tests/
+  - dotnet restore
+  - cd tests/
   - dotnet test
   
