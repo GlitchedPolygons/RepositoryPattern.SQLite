@@ -10,7 +10,6 @@
     <Company>Glitched Polygons</Company>
     <Description>Abstract base class for SQLite repositories.</Description>
     <PackageProjectUrl>https://github.com/GlitchedPolygons/RepositoryPattern</PackageProjectUrl>
-    <PackageIconUrl>https://raw.githubusercontent.com/GlitchedPolygons/RepositoryPattern/4d8816f64c600fcfb30d1f93d4bd2354d7f6df40/icon.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/GlitchedPolygons/RepositoryPattern.SQLite</RepositoryUrl>
     <PackageTags>c# repository design pattern base interface declaration db database access abstraction repositories sql relational rdbms dbms sqlite embedded</PackageTags>
     <Version>1.0.2</Version>
@@ -38,5 +37,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+
+
+<PropertyGroup>
+  <PackageIcon>icon.png</PackageIcon>
+</PropertyGroup>
+
+<ItemGroup>
+  <None Include="icon.png" Pack="true" PackagePath="\"/>
+</ItemGroup>
+
 
 </Project>
