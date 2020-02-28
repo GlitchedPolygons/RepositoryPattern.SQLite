@@ -1,12 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
         <IsPackable>false</IsPackable>
         <RootNamespace>GlitchedPolygons.RepositoryPattern.SQLite.Tests</RootNamespace>
         <AssemblyName>GlitchedPolygons.RepositoryPattern.SQLite.Tests</AssemblyName>
         <PackageId>GlitchedPolygons.RepositoryPattern.SQLite.Tests</PackageId>
         <Authors />
+        <LangVersion>8</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>

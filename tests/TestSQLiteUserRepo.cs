@@ -25,13 +25,11 @@ namespace GlitchedPolygons.RepositoryPattern.SQLite.Tests
             }
 
             entity.Id = Guid.NewGuid().ToString("N");
-            
-            using (var dbcon = OpenConnection())
-            {
-                string sql = $"INSERT INTO \"{TableName}\" VALUES (@Id, @FullName, @Address, @PhoneNumber)";
-                int result = await dbcon.ExecuteAsync(sql, new {Id = entity.Id, entity.FullName, entity.Address, entity.PhoneNumber});
-                return result > 0;
-            }
+
+            using var dbcon = OpenConnection();
+            string sql = $"INSERT INTO \"{TableName}\" VALUES (@Id, @FullName, @Address, @PhoneNumber)";
+            int result = await dbcon.ExecuteAsync(sql, new {Id = entity.Id, entity.FullName, entity.Address, entity.PhoneNumber}).ConfigureAwait(false);
+            return result > 0;
         }
 
         public override async Task<bool> AddRange(IEnumerable<User> entities)
@@ -50,11 +48,9 @@ namespace GlitchedPolygons.RepositoryPattern.SQLite.Tests
                 sql.Append("('").Append(entity.Id).Append("', '").Append(entity.FullName).Append("', '").Append(entity.Address).Append("', '").Append(entity.PhoneNumber).Append("'),");
             }
 
-            using (var dbcon = OpenConnection())
-            {
-                int result = await dbcon.ExecuteAsync(sql.ToString().TrimEnd(','));
-                return result > 0;
-            }
+            using var dbcon = OpenConnection();
+            int result = await dbcon.ExecuteAsync(sql.ToString().TrimEnd(',')).ConfigureAwait(false);
+            return result > 0;
         }
 
         public override async Task<bool> Update(User entity)
@@ -65,19 +61,17 @@ namespace GlitchedPolygons.RepositoryPattern.SQLite.Tests
                 .Append("\"Address\" = @Address, ")
                 .Append("\"PhoneNumber\" = @PhoneNumber ")
                 .Append("WHERE \"Id\" = @Id");
-            
-            using (var dbcon = OpenConnection())
+
+            using var dbcon = OpenConnection();
+            int result = await dbcon.ExecuteAsync(sql.ToString(), new
             {
-                int result = await dbcon.ExecuteAsync(sql.ToString(), new
-                {
-                    Id = entity.Id, 
-                    entity.FullName, 
-                    entity.Address, 
-                    entity.PhoneNumber
-                });
+                Id = entity.Id, 
+                entity.FullName, 
+                entity.Address, 
+                entity.PhoneNumber
+            }).ConfigureAwait(false);
                 
-                return result > 0;
-            }
+            return result > 0;
         }
     }
 }

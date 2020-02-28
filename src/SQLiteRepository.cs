@@ -56,11 +56,9 @@ namespace GlitchedPolygons.RepositoryPattern.SQLite
         /// <returns>The first found <see cref="T:GlitchedPolygons.RepositoryPattern.IEntity`1" />; <c>null</c> if nothing was found.</returns>
         public async Task<T1> Get(T2 id)
         {
-            using (var sqlc = OpenConnection())
-            {
-                string sql = $"SELECT * FROM \"{TableName}\" WHERE \"Id\" = @Id";
-                return await sqlc.QueryFirstOrDefaultAsync<T1>(sql, new {Id = id});
-            }
+            using var sqlc = OpenConnection();
+            string sql = $"SELECT * FROM \"{TableName}\" WHERE \"Id\" = @Id";
+            return await sqlc.QueryFirstOrDefaultAsync<T1>(sql, new { Id = id }).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -72,11 +70,9 @@ namespace GlitchedPolygons.RepositoryPattern.SQLite
         {
             get
             {
-                using (var sqlc = OpenConnection())
-                {
-                    string sql = $"SELECT * FROM \"{TableName}\" WHERE \"Id\" = @Id";
-                    return sqlc.QueryFirstOrDefault<T1>(sql, new {Id = id});
-                }
+                using var sqlc = OpenConnection();
+                string sql = $"SELECT * FROM \"{TableName}\" WHERE \"Id\" = @Id";
+                return sqlc.QueryFirstOrDefault<T1>(sql, new { Id = id });
             }
         }
 
@@ -86,11 +82,9 @@ namespace GlitchedPolygons.RepositoryPattern.SQLite
         /// <returns>All entities inside the repo.</returns>
         public async Task<IEnumerable<T1>> GetAll()
         {
-            using (var sqlc = OpenConnection())
-            {
-                string sql = $"SELECT * FROM \"{TableName}\"";
-                return await sqlc.QueryAsync<T1>(sql);
-            }
+            using var sqlc = OpenConnection();
+            string sql = $"SELECT * FROM \"{TableName}\"";
+            return await sqlc.QueryAsync<T1>(sql).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -104,10 +98,10 @@ namespace GlitchedPolygons.RepositoryPattern.SQLite
         {
             try
             {
-                T1 result = (await GetAll()).SingleOrDefault(predicate.Compile());
+                T1 result = (await GetAll().ConfigureAwait(false)).SingleOrDefault(predicate.Compile());
                 return result;
             }
-            catch (Exception)
+            catch
             {
                 return default;
             }
@@ -123,10 +117,10 @@ namespace GlitchedPolygons.RepositoryPattern.SQLite
         {
             try
             {
-                IEnumerable<T1> result = (await GetAll())?.Where(predicate.Compile());
+                IEnumerable<T1> result = (await GetAll().ConfigureAwait(false))?.Where(predicate.Compile());
                 return result;
             }
-            catch (Exception)
+            catch
             {
                 return Array.Empty<T1>();
             }
@@ -162,7 +156,7 @@ namespace GlitchedPolygons.RepositoryPattern.SQLite
         /// <returns>Whether the entity could be removed successfully or not.</returns>
         public async Task<bool> Remove(T1 entity)
         {
-            return await Remove(entity.Id);
+            return await Remove(entity.Id).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -172,14 +166,14 @@ namespace GlitchedPolygons.RepositoryPattern.SQLite
         /// <returns>Whether the entity could be removed successfully or not.</returns>
         public async Task<bool> Remove(T2 id)
         {
-            bool result = false;
+            bool result;
             IDbConnection sqlc = null;
             try
             {
                 sqlc = OpenConnection();
-                result = await sqlc.ExecuteAsync($"DELETE FROM \"{TableName}\" WHERE \"Id\" = @Id", new {Id = id}) > 0;
+                result = await sqlc.ExecuteAsync($"DELETE FROM \"{TableName}\" WHERE \"Id\" = @Id", new { Id = id }).ConfigureAwait(false) > 0;
             }
-            catch (Exception)
+            catch
             {
                 result = false;
             }
@@ -187,6 +181,7 @@ namespace GlitchedPolygons.RepositoryPattern.SQLite
             {
                 sqlc?.Dispose();
             }
+
             return result;
         }
 
@@ -196,14 +191,14 @@ namespace GlitchedPolygons.RepositoryPattern.SQLite
         /// <returns>Whether the entities were removed successfully or not. If the repository was already empty, <c>false</c> is returned (because nothing was actually &lt;&lt;removed&gt;&gt; ).</returns>
         public async Task<bool> RemoveAll()
         {
-            bool result = false;
+            bool result;
             IDbConnection sqlc = null;
             try
             {
                 sqlc = OpenConnection();
-                result = await sqlc.ExecuteAsync($"DELETE FROM \"{TableName}\"") > 0;
+                result = await sqlc.ExecuteAsync($"DELETE FROM \"{TableName}\"").ConfigureAwait(false) > 0;
             }
-            catch (Exception)
+            catch
             {
                 result = false;
             }
@@ -211,6 +206,7 @@ namespace GlitchedPolygons.RepositoryPattern.SQLite
             {
                 sqlc?.Dispose();
             }
+
             return result;
         }
 
@@ -222,7 +218,7 @@ namespace GlitchedPolygons.RepositoryPattern.SQLite
         /// <returns>Whether the entities were removed successfully or not.</returns>
         public async Task<bool> RemoveRange(Expression<Func<T1, bool>> predicate)
         {
-            return await RemoveRange(await Find(predicate));
+            return await RemoveRange(await Find(predicate)).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -232,7 +228,7 @@ namespace GlitchedPolygons.RepositoryPattern.SQLite
         /// <returns>Whether all entities were removed successfully or not.</returns>
         public async Task<bool> RemoveRange(IEnumerable<T1> entities)
         {
-            return await RemoveRange(entities.Select(e => e.Id));
+            return await RemoveRange(entities.Select(e => e.Id)).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -242,7 +238,7 @@ namespace GlitchedPolygons.RepositoryPattern.SQLite
         /// <returns>Whether all entities were removed successfully or not.</returns>
         public async Task<bool> RemoveRange(IEnumerable<T2> ids)
         {
-            bool result = false;
+            bool result;
             IDbConnection sqlc = null;
             try
             {
@@ -259,11 +255,11 @@ namespace GlitchedPolygons.RepositoryPattern.SQLite
                 }
 
                 string sqlString = sql.ToString().TrimEnd(',', ' ') + ");";
-                
+
                 sqlc = OpenConnection();
-                result = await sqlc.ExecuteAsync(sqlString) > 0;
+                result = await sqlc.ExecuteAsync(sqlString).ConfigureAwait(false) > 0;
             }
-            catch (Exception)
+            catch
             {
                 result = false;
             }
@@ -271,6 +267,7 @@ namespace GlitchedPolygons.RepositoryPattern.SQLite
             {
                 sqlc?.Dispose();
             }
+
             return result;
         }
     }
